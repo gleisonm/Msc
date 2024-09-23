@@ -4,12 +4,12 @@
 - Banco de Dados
 
 ## Conceitos-Chave
-- Genomica -> Transcriptomica -> Proteômica -> Metabolômica
+- Genômica -> Transcriptomica -> Proteômica -> Metabolômica
 - Importante ter dados do mesmo paciente
 
 ## Resumo
 #### Genômica
- - Tipo celular **[[Somático]] ou [[Germinativo]]** ([Sarek](https://nf-co.re/sarek/3.2.3/))
+ - Tipo celular **[[Somátic]] ou [[Germinative]]** ([Sarek](https://nf-co.re/sarek/3.2.3/))
  - Tipo de alterações:
 	 - [[SNV]]
 	 - [[SNP]]
@@ -44,20 +44,7 @@ Sequenciamento proteico para quantificar sua abundância, modificações e alter
 - [cfOmics]()
 - [CottonMD]()
 
-####
-```{r}
-
-```
-
-## Dúvidas e Perguntas
-- 
-
-## Links Úteis
-- [Link](#Link)
-
-## Tarefas e Ações
-- [ ] Revisar material X
-- [ ] Pesquisar sobre Y
 
 
-#Multiomics #Genomic #Transcriptomic #Proteomic #Metabolomic
+
+#Multiomic #Genomic #Transcriptomic #Proteomic #Metabolomic

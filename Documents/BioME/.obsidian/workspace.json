@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#Multiomics",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -148,8 +148,8 @@
   },
   "active": "a2153e3f43c127c5",
   "lastOpenFiles": [
-    "NGDC.md",
     "Multiômica -  Introdução.md",
+    "NGDC.md",
     "Welcome.md"
   ]
 }
