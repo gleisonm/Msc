@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "dd4f93168845e785",
+        "id": "c420e775f2d04d28",
         "type": "tabs",
         "children": [
           {
-            "id": "253e884a617fce39",
+            "id": "a2153e3f43c127c5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Multiômica -  Aula 1.md",
+                "file": "Multiômica -  Introdução.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "82294355468dc182",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Multiômica -  Aula 1.md",
+                "file": "Multiômica -  Introdução.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Multiômica -  Aula 1.md",
+                "file": "Multiômica -  Introdução.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Multiômica -  Aula 1.md"
+                "file": "Multiômica -  Introdução.md"
               }
             }
           }
@@ -147,9 +146,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "253e884a617fce39",
+  "active": "a2153e3f43c127c5",
   "lastOpenFiles": [
-    "Multiômica -  Aula 1.md",
+    "NGDC.md",
+    "Multiômica -  Introdução.md",
     "Welcome.md"
   ]
 }
