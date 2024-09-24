@@ -1,0 +1,159 @@
+{
+  "main": {
+    "id": "6916e35d659c0b46",
+    "type": "split",
+    "children": [
+      {
+        "id": "d3299d93d98dda34",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c08fdf6aaab6fd82",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "BioME/Ribo-seq - Principles.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c8c9b6e232d2ea85",
+    "type": "split",
+    "children": [
+      {
+        "id": "73f6df0ea12c10cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "a4d8184e351e095b",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2079ccfa2470e835",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "72681a7498beab0e",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "bccbf2d8237c7170",
+    "type": "split",
+    "children": [
+      {
+        "id": "5783a0f96c464364",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "06135ba5708a3ba8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "BioME/Ribo-seq - Principles.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "b2ec52f6c9861256",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "BioME/Ribo-seq - Principles.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "4a8594f6f4446f5d",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "0ac60bead50d34a6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "BioME/Ribo-seq - Principles.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "c08fdf6aaab6fd82",
+  "lastOpenFiles": [
+    "BioME/Ribo-seq - Principles.md",
+    "BioME/Ribo-seq - keysteps.md",
+    "BioME/RIBO-seq.md",
+    "BioME/Pasted image 20240924115119.jpg",
+    "BioME/Multiômica - Introdução.md",
+    "BioME/Multiômica - Integrando Dados.md",
+    "BioME/Multiômica.md"
+  ]
+}

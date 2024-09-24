@@ -48,4 +48,4 @@ Sequenciamento proteico para quantificar sua abundância, modificações e alter
 
 
 
-#Multiomic #Genomic #Transcriptomic #Proteomic #Metabolomic
+#Multiomic #Genomic #Transcriptomic #Proteomic #Metabolomic #class

@@ -64,4 +64,4 @@ Durante a integração precisamos reduzir a dimensionalidade da matriz de cada �
 
 
 
-#Multiomic #Genomic #Transcriptomic #Proteomic #Metabolomic
+#Multiomic #Genomic #Transcriptomic #Proteomic #Metabolomic #class
