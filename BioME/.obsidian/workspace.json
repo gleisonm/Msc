@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Multiômica -  Introdução.md",
+                "file": "Multiômica - Introdução.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "bdb0161fe71419d2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Multiômica - Integrando Dados.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -48,7 +61,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#Multiomics",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Multiômica -  Introdução.md",
+                "file": "Multiômica - Integrando Dados.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Multiômica -  Introdução.md",
+                "file": "Multiômica - Integrando Dados.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Multiômica -  Introdução.md"
+                "file": "Multiômica - Integrando Dados.md"
               }
             }
           }
@@ -146,9 +159,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a2153e3f43c127c5",
+  "active": "bdb0161fe71419d2",
   "lastOpenFiles": [
-    "Multiômica -  Introdução.md",
+    "Multiômica - Integrando Dados.md",
+    "Multiômica.md",
+    "Multiômica - Introdução.md",
+    "Multiômica",
     "NGDC.md",
     "Welcome.md"
   ]
