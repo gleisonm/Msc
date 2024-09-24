@@ -128,13 +128,29 @@
                 "file": "BioME/Ribo-seq - Principles.md"
               }
             }
+          },
+          {
+            "id": "d0a8ffb11dcb3222",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "9fa2f4db164eb684",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -143,17 +159,23 @@
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
   "active": "c08fdf6aaab6fd82",
   "lastOpenFiles": [
+    "BioME/sintese-de-proteina.webp",
+    "BioME/Multiômics - Introdução.md",
+    "BioME/Multiômics.md",
+    "BioME/Multiômics - Integrando Dados.md",
     "BioME/Ribo-seq - Principles.md",
+    "Pasted image 20240924161250.png",
+    "Pasted image 20240924145746.jpg",
+    "Pasted image 20240924145707.jpg",
     "BioME/Ribo-seq - keysteps.md",
     "BioME/RIBO-seq.md",
-    "BioME/Pasted image 20240924115119.jpg",
-    "BioME/Multiômica - Introdução.md",
-    "BioME/Multiômica - Integrando Dados.md",
-    "BioME/Multiômica.md"
+    "BioME/Pasted image 20240924115119.jpg"
   ]
 }
