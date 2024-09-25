@@ -14,6 +14,7 @@
 - A posição relativa aos sítios A e P nos fragmentos protegidos pelo ribossomo pode ser determinada pelas Ribo-seq reads mapeadas pelos start e stop codon.
 	- Apenas o sítio P permite a ocupação do **start códon**
 	- apenas o sítio A permite a ocupação do **stop códon**
+- Cada footprint possui uma sequencia característica que pode ser mapeada ao transcriptoma referência
 - Tradução:
 ![[sintese-de-proteina.webp]]
 
@@ -73,6 +74,10 @@ Tecnicamente, Ribo-seq é utilizado para estimar a abundancia da tradução de m
 | riboWaltz: An R package for the identification of the ribosome P site, analysis, and visual inspection of ribosome profiling data.  <br>[https://github.com/LabTranslationalArchitectomics/RiboWaltz](https://github.com/LabTranslationalArchitectomics/RiboWaltz) [[42](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9562884/#B42-cells-11-02966)].                            | Addresses issue of time limitation and data preprocessing.                                                                |
 | RiboToolkit: A freely available, web-based service to centralize Ribo-seq data analyses, codon occupancy, and translation efficiency analysis.  <br>[http://rnainformatics.org.cn/RiboToolkit/](http://rnainformatics.org.cn/RiboToolkit/) [[43](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9562884/#B43-cells-11-02966)].                                                    | Addresses the lacking integrated tool and easy-to-use integrated tool to analyze Ribo-seq data.                           |
 | RiboTools: An open-source Galaxy tool used to evaluate codon occupancy at a specific ribosome site and for translation readthrough events.  <br>[https://testtoolshed.g2.bx.psu.edu/view/rlegendre/ribo_tools](https://testtoolshed.g2.bx.psu.edu/view/rlegendre/ribo_tools) [[44](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9562884/#B44-cells-11-02966)].                  | Facilitates complete qualitative analysis.                                                                                |
+
+#### Footprints and Translation Efficiency
+Footprints (mRNA-protected fragments) são aproximadamente de 28-30 nt. **Cada footprint possui uma sequencia característica que pode ser mapeada ao transcriptoma referência** o que possibilita identificar regiões codantes (Obs: que podem ter sido descritas erroneamente pelo transcrito referência como região não codante)
+
 
 ## Dúvidas e Perguntas
 - Qual o tamanho do fragmento que fica dentro do Ribossomo?
