@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BioME/Ribo-seq - Principles.md",
+                "file": "BioME/Ribo-seq.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BioME/Ribo-seq - Principles.md",
+                "file": "BioME/Ribo-seq.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BioME/Ribo-seq - Principles.md",
+                "file": "BioME/Ribo-seq.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BioME/Ribo-seq - Principles.md"
+                "file": "BioME/Ribo-seq.md"
               }
             }
           },
@@ -164,10 +164,10 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "96404237a3c8885e",
+  "active": "a4d8184e351e095b",
   "lastOpenFiles": [
-    "Untitled.md",
     "BioME/Ribo-seq - Principles.md",
+    "Untitled.md",
     "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases 2.md",
     "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases 1.md",
     "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases.pdf",
