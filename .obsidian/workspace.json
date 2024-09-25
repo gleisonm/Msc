@@ -4,16 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "43e3f33d443d905c",
+        "id": "6ce30618c4a26a8a",
         "type": "tabs",
         "children": [
           {
-            "id": "6f2ca91b6ae489ea",
+            "id": "96404237a3c8885e",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "BioME/Figures/Pasted image 20240924115119.jpg"
+                "file": "BioME/Ribo-seq - Principles.md",
+                "mode": "source",
+                "source": false
               }
             }
           }
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BioME/Figures/Pasted image 20240924115119.jpg",
+                "file": "BioME/Ribo-seq - Principles.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BioME/Figures/Pasted image 20240924115119.jpg",
+                "file": "BioME/Ribo-seq - Principles.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,16 +125,8 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BioME/Figures/Pasted image 20240924115119.jpg"
+                "file": "BioME/Ribo-seq - Principles.md"
               }
-            }
-          },
-          {
-            "id": "d0a8ffb11dcb3222",
-            "type": "leaf",
-            "state": {
-              "type": "mermaid-toolbar-view",
-              "state": {}
             }
           },
           {
@@ -142,9 +136,17 @@
               "type": "git-view",
               "state": {}
             }
+          },
+          {
+            "id": "9a21e7f3dca49627",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -162,18 +164,23 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "6f2ca91b6ae489ea",
+  "active": "96404237a3c8885e",
   "lastOpenFiles": [
-    "BioME/Figures/Pasted image 20240924161250.png",
-    "BioME/Figures/Pasted image 20240924115119.jpg",
+    "Untitled.md",
     "BioME/Ribo-seq - Principles.md",
-    "BioME/Ribo-seq - keysteps.md",
+    "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases 2.md",
+    "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases 1.md",
+    "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases.pdf",
+    "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases.md",
     "BioME/Ribo-seq.md",
+    "BioME/Multiômics - Introdução.md",
+    "BioME/Multiômics - Integrando Dados.md",
+    "BioME/Multiômics.md",
+    "BioME/Figures/Pasted image 20240924115119.jpg",
+    "BioME/Figures/Pasted image 20240924161250.png",
+    "BioME/Ribo-seq - keysteps.md",
     "BioME/Figures",
     "BioME/Figures/sintese-de-proteina.webp",
-    "BioME/Multiômics - Introdução.md",
-    "BioME/Multiômics.md",
-    "BioME/Multiômics - Integrando Dados.md",
     "Pasted image 20240924145746.jpg",
     "Pasted image 20240924145707.jpg"
   ]
