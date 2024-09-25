@@ -11,11 +11,9 @@
             "id": "6f2ca91b6ae489ea",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "BioME/Ribo-seq.md",
-                "mode": "source",
-                "source": false
+                "file": "BioME/Figures/Pasted image 20240924115119.jpg"
               }
             }
           }
@@ -85,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BioME/Ribo-seq.md",
+                "file": "BioME/Figures/Pasted image 20240924115119.jpg",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BioME/Ribo-seq.md",
+                "file": "BioME/Figures/Pasted image 20240924115119.jpg",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BioME/Ribo-seq.md"
+                "file": "BioME/Figures/Pasted image 20240924115119.jpg"
               }
             }
           },
@@ -166,17 +164,17 @@
   },
   "active": "6f2ca91b6ae489ea",
   "lastOpenFiles": [
-    "BioME/Ribo-seq.md",
+    "BioME/Figures/Pasted image 20240924161250.png",
+    "BioME/Figures/Pasted image 20240924115119.jpg",
     "BioME/Ribo-seq - Principles.md",
+    "BioME/Ribo-seq - keysteps.md",
+    "BioME/Ribo-seq.md",
     "BioME/Figures",
     "BioME/Figures/sintese-de-proteina.webp",
     "BioME/Multiômics - Introdução.md",
     "BioME/Multiômics.md",
     "BioME/Multiômics - Integrando Dados.md",
-    "BioME/Figures/Pasted image 20240924161250.png",
     "Pasted image 20240924145746.jpg",
-    "Pasted image 20240924145707.jpg",
-    "BioME/Ribo-seq - keysteps.md",
-    "BioME/Figures/Pasted image 20240924115119.jpg"
+    "Pasted image 20240924145707.jpg"
   ]
 }
