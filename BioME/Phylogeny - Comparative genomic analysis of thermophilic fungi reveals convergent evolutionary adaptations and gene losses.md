@@ -74,8 +74,19 @@ Analisaram no genoma de 29 fungos:
 		1. Os genomas completos foram avaliados com [BUSCO](https://busco.ezlab.org/)
 			- Avalia a montagem através de ortologia
 
-> **Inconsistencia**: Falam que utilizaram essas 37 e 42 amostras, mas so sequenciaram 23 (?)
-> 
+> 		**Inconsistencia**: Falam que utilizaram essas 37 e 42 amostras, mas so sequenciaram 23 (?)
+
+2. **Phylogenetic Analysis**
+	1. Phylogenetic Tree
+		- A árvore foi baseada em 371 **singlo-copy orthologs.** dos 79 genomas utilizando o [OrthoFinder](https://github.com/davidemms/OrthoFinder)
+		- Os genes foram alinhados utilizando o [Mafft](https://mafft.cbrc.jp/alignment/server/index.html) e concatenados e filtrados utilizando o [TrimAL](https://trimal.readthedocs.io/en/latest/)
+		- Para o construir o modelo da árvore foi utilizado o [iqtree](https://www.iqtree.org/)
+			- Modelo de Heterogeneidade: MFP (Model Finder)
+		- Para o enraizamento utilizaram o Phylogenetic Hierarchical Orthogroups gene counts do OrthoFinder
+	 2. Para inferir características ancestrais de cada grupo, utilizaram dos resultados do crescimento ótimo de cada espécie e foi reconstruído com [Mesquite](http://www.mesquiteproject.org/)
+		-  A árvore de características ancestrais foi utilizada um modelo de parsimonia não ordenado
+		- Característica binárias foram analizadas utilizando o modelo de parâmetro Markov k-state 1 ( likelihood reconstruction model)
+
 
 ## Resultados
 Escreva os resultados mais relevantes.
@@ -100,3 +111,4 @@ Resumo das principais discussões e implicações do artigo.
 	- Provavelmente o genoma referencia foi utilizada em outras ferramentas de sequenciamento.
 5. **Genome sequencing, assembly, and annotation** → Porque 3 plataformas de sequenciamento? Sequenciaram a mesma espécie 3 vezes?
 6. **Genome sequencing, assembly, and annotation** → Qual o tipo de sequenciamento? Shotgun, Amplicon…?
+7. **Phylogenetic analysis** -> o que é um modelo de parsimonia não ordenado?
