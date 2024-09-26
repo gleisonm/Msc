@@ -29,7 +29,7 @@ Atualmente as metodologias de Ribo-seq possuem resolução a nível de nucleotí
 A base da Ribo-seq é que **fragmentos de mRNA ligados à ribossomos são protegidos da digestão por nuclease**. Por isso, com utilização de métodos de sequenciamento High Throughput e estratégias computacionais é possível aferir o *ribossome footprint* a partir de transcritos
 
 [[Ribo-seq - keysteps]]
-![[Pasted image 20240924115119.jpg]]
+![[Riboseq-keysteps.jpg]]
 >*Schematic illustration of the current workflow of ribosomes. The experiment starts with cell lysis, which isolates and immobilizes the mRNA ribosome complexes, and is followed by nuclease digestion of mRNA sequences that are not protected by associated ribosomes. Purification of the mRNA fragments shielded by the ribosomes is then carried out, followed by standard deep sequencing protocols, such as library preparation.*
 
 RNA-seq mede a quantidade total de mRNA e a regulação transcricional, Ribo-seq, por outro lado, pode ser utilizado para medir os mRNAs que realmente foram traduzidos, sendo mais acurado para medir a expressão proteica do que RNA-seq.
