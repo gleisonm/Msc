@@ -38,6 +38,7 @@
 	    Mucoromycota --> Mucorales
 	```
 
+
 ## Objetivo do Artigo
 O objetivo principal é identificar características genômicas distintivas que permitam aos fungos termófilos prosperar em ambientes de alta temperatura.
 ## Key-Steps
@@ -82,12 +83,28 @@ Analisaram no genoma de 29 fungos:
 		- Os genes foram alinhados utilizando o [Mafft](https://mafft.cbrc.jp/alignment/server/index.html) e concatenados e filtrados utilizando o [TrimAL](https://trimal.readthedocs.io/en/latest/)
 		- Para o construir o modelo da árvore foi utilizado o [iqtree](https://www.iqtree.org/)
 			- Modelo de Heterogeneidade: MFP (Model Finder)
-		- Para o enraizamento utilizaram o Phylogenetic Hierarchical Orthogroups gene counts do OrthoFinder
+		- Para o enraizamento utilizaram o Phylogenetic Hierarchical Orthogroups (HOGs) gene counts do OrthoFinder
+			- HOGs foram analizados com [CAFE](https://github.com/hahnlab/CAFE) para detectar expansões gênicas durante a evolução com o método Viterbi. **(Apenas  famílias genicas com p-valor de Viterbi <0.01 foram consideradas)**
 	 2. Para inferir características ancestrais de cada grupo, utilizaram dos resultados do crescimento ótimo de cada espécie e foi reconstruído com [Mesquite](http://www.mesquiteproject.org/)
 		-  A árvore de características ancestrais foi utilizada um modelo de parsimonia não ordenado
 		- Característica binárias foram analizadas utilizando o modelo de parâmetro Markov k-state 1 ( likelihood reconstruction model)
+	3. Enriquecimento (GO)
+		- terms was performed using a two-tailed Fisher’s exact test (FET) and corrected for multiple testing using the Benjamini–Hochberg method in Python v.3.6 using the modules pandas v.1.1.5, numpy v.1.20.2 and scipy v.1.5.2. Mood’s median nonparametric test48 and Wilcoxon rank sum tests **were used to evaluate the significance of GC3 differences between thermophilic, thermotolerant, and mesophilic fungi.**
 
+3. Pangenome and condon usage analysis
+	1. Para a análise de pangenoma, foram identificados core, shell e genes únicos baseados no output do OrthoFinder.
+	2. ENC e GC3 que mede o grau de synonimous codon bias foram computadas com [CodonW](https://codonw.sourceforge.net/)
 
+4. Machine Learning to distinguish between thermophilic and mesophilic lifestyles
+	1. Utilizaram ML para identificar quais os HOGs do output do OrthoFinder mais explicam a diferença entre os genomas  termotolerantes e termofilos ou termofilos e mesofilos (?)
+> **Erro de digitação:**  “thermophilic and thermophilic genome”
+
+5. Protein structure prediction and clustering
+	1. A sequencia da Proteína GH10 endoxylanases das espécies utilizadas foram baixadas do MycoCosm
+		- A análise de Peptídeo Sinal foi feita com [signalP](https://scholar.google.com/scholar_url?url=https://link.springer.com/protocol/10.1007/978-1-4939-7015-5_6&hl=pt-PT&sa=T&oi=gsr-r&ct=res&cd=0&d=14986793229234265112&ei=ppf1Zt6fMdKAy9YPm-_p6Ao&scisig=AFWwaeYFL1DUScvI21reeUiltgyd) que quando detectado, o peptídeo sinal foi removido da sequencia e utilizado para a modelagem estrutural
+	2. As estruturas foram preditas com AlphaFold2, gerando 5 modelos para cada proteína e o melhor modelo foi selecionado pelo melhor score pLDDT
+	3. Usando [FoldSeek](https://scholar.google.com/scholar_url?url=https://www.nature.com/articles/s41587-023-01773-0&hl=pt-PT&sa=T&oi=gsr-r-ggp&ct=res&cd=0&d=4137419607255584211&ei=pZj1ZoyDLvbYy9YPrPDH6Aw&scisig=AFWwaeYOWg0_ajKOYxMdZv-uj32J) foi construída uma rede de similaridade estrutural e visualizado com Cytoskape
+	4. A reconstrução da filogenia dessa proteína foi reconstruída utilizando o Mafft e TrimAL e a árvore foi construída com iqtree
 ## Resultados
 Escreva os resultados mais relevantes.
 
@@ -103,12 +120,23 @@ Resumo das principais discussões e implicações do artigo.
 
 ## Dúvidas
 1. Qual a função da alta proporção de gordura saturada nos fosfolipídeos em fungos termotolerantes/termófilos?
+
 2. Qual a função de phosphatidylcholine, phosphatidylethanolamine e trealose no metabolismo dos fungos?
+
 3. **Genome sequencing, assembly, and annotation** → Foram 37 e 42 espécies ou indivíduos?
+
 4. **Genome sequencing, assembly, and annotation** → Os genomas foram obtidos como referencia pro sequenciamento? Se não, porque classificaram o perfil de cada espécie, não existia informações sobre isso?
 	- Aparentemente de todas as espécies, apenas 23 nao haviam sido sequenciadas ainda.
 	- Se usaram uma metodologia de montagem de novo, não faz sentido usarem genoma referencia
 	- Provavelmente o genoma referencia foi utilizada em outras ferramentas de sequenciamento.
+
 5. **Genome sequencing, assembly, and annotation** → Porque 3 plataformas de sequenciamento? Sequenciaram a mesma espécie 3 vezes?
+
 6. **Genome sequencing, assembly, and annotation** → Qual o tipo de sequenciamento? Shotgun, Amplicon…?
-7. **Phylogenetic analysis** -> o que é um modelo de parsimonia não ordenado?
+
+6. **Phylogenetic analysis** → o que é um modelo de parsimonia não ordenado?
+
+7. **Pangenome Analysis** → o que são core, shell e genes únicos?
+
+8. **Protein structure prediction and clustering** → GH10 endoxylanases?
+	- **GH10 endoxylanases** são enzimas que pertencem à **família 10 das glicosil hidrolases (GH10)**, uma classificação baseada em suas características estruturais e funcionais. Essas enzimas são especializadas na degradação da **xilana**, um polissacarídeo abundante nas hemiceluloses das paredes celulares de plantas, sendo particularmente importante na indústria de biocombustíveis, alimentação animal, e papel e celulose.
