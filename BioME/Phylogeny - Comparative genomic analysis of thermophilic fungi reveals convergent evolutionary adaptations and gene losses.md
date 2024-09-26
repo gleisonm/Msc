@@ -42,7 +42,7 @@
 ## Objetivo do Artigo
 O objetivo principal é identificar características genômicas distintivas que permitam aos fungos termófilos prosperar em ambientes de alta temperatura.
 ## Key-Steps
-Analisaram no genoma de 29 fungos:
+Analisaram no genoma de 29 termófilos, 8 termotolerantes e 42 mesófilos = 79 espécies:
 - Increase in the **third base of codon** (GC3)
 - Reduction in the **effective number of codon** (ENC) and core genes content
 - **Machine Learning Approach** to classify thermophilic/mesophilic fungi based on four gene families with high accuracy
@@ -75,7 +75,7 @@ Analisaram no genoma de 29 fungos:
 		1. Os genomas completos foram avaliados com [BUSCO](https://busco.ezlab.org/)
 			- Avalia a montagem através de ortologia
 
-> 		**Inconsistencia**: Falam que utilizaram essas 37 e 42 amostras, mas so sequenciaram 23 (?)
+> **Inconsistencia**: Falam que utilizaram essas 37 e 42 amostras, mas so sequenciaram 23 (?)
 
 2. **Phylogenetic Analysis**
 	1. Phylogenetic Tree
@@ -85,7 +85,7 @@ Analisaram no genoma de 29 fungos:
 			- Modelo de Heterogeneidade: MFP (Model Finder)
 		- Para o enraizamento utilizaram o Phylogenetic Hierarchical Orthogroups (HOGs) gene counts do OrthoFinder
 			- HOGs foram analizados com [CAFE](https://github.com/hahnlab/CAFE) para detectar expansões gênicas durante a evolução com o método Viterbi. **(Apenas  famílias genicas com p-valor de Viterbi <0.01 foram consideradas)**
-	 2. Para inferir características ancestrais de cada grupo, utilizaram dos resultados do crescimento ótimo de cada espécie e foi reconstruído com [Mesquite](http://www.mesquiteproject.org/)
+	 2. Para inferir características ancestrais dos grupos Chaetomiaceae, Thermoascaceae, and Trichocomaceae (termófilos), utilizaram dos resultados do crescimento ótimo de cada espécie e foi reconstruído com [Mesquite](http://www.mesquiteproject.org/)
 		-  A árvore de características ancestrais foi utilizada um modelo de parsimonia não ordenado
 		- Característica binárias foram analizadas utilizando o modelo de parâmetro Markov k-state 1 ( likelihood reconstruction model)
 	3. Enriquecimento (GO)
@@ -106,17 +106,39 @@ Analisaram no genoma de 29 fungos:
 	3. Usando [FoldSeek](https://scholar.google.com/scholar_url?url=https://www.nature.com/articles/s41587-023-01773-0&hl=pt-PT&sa=T&oi=gsr-r-ggp&ct=res&cd=0&d=4137419607255584211&ei=pZj1ZoyDLvbYy9YPrPDH6Aw&scisig=AFWwaeYOWg0_ajKOYxMdZv-uj32J) foi construída uma rede de similaridade estrutural e visualizado com Cytoskape
 	4. A reconstrução da filogenia dessa proteína foi reconstruída utilizando o Mafft e TrimAL e a árvore foi construída com iqtree
 ## Resultados
-Escreva os resultados mais relevantes.
+
+### Phylogeny and genomic features
+Reconstruiram o estado ancestral dos clados Chaetomiaceae, Thermoascaceae, and Trichocomaceae afim de encontrar o ancestral comum. **Apenas o grupo Chaetiomiaceae** revelaram **duas ou mais transições termofilas-mesofilas**.
+
+Foi observado que fungos termófilos possuem menores genomas quando comparados com mesofilos Fig1 B (p < 3.3 × 10−5)
+
+#### Phylogeny and genome features of thermophilic
+![[Figura 1 paper filogenia.webp]]
+
+Fungos Termofilos são conhecidos por secretarem enziamas termoestáveis, em particular CAZymes (Fig 1 c) o que foi significamente correlacionado com as especies termofilas analisadas
+
+> Thermophilic fungi are known to secrete a wide range of thermostable enzymes, in particular CAZymes7 (Fig. 1c, and Supplementary Data 2). Among the classes of CAZymes within Chaetomiaceae, the auxiliary activities (AA) (p = 0.047 - WT), carbohydrate esterases (CE) (p = 0.042), and pectate lyases (PL) (p = 0.001 - WT) were significantly contracted in thermophiles. In Eurotiomycetes, in contrast, carbohydrate binding modules (CBM - WT) and expansins (EXPN - WT) (both with p = 0.039) were significantly reduced. When the human pathogens (Triru1, Hisca1, and Cocim1) were excluded from the analysis, glycoside hydrolases (GH) were shown to be significantly reduced in thermophiles as well (p = 0.0015 - WT). This is because human pathogen genomes encode a reduced number of GH compared to other mesophilic fungi (p = 0.023 - WT) (Fig. 1c).
+
+### Thermophiles have a reduced core genome content
+Para compreender a redução do tamanho do genoma e seus conteúdos, fizeram uma análise de pangenoma das espécies  Chaetomiaceae family and Eurotiomycetes family paralelamente.
+A curva de rarefação(?) de unique shells genes tem uma distribuição similar em termófilos e mesófilos
+
+Os genes core dos termófilos estão reduzidos nos dois clados, revelando um padrão conservado em grupos relacionados distantes. Fig 2a
+
+#### Pangenome of Chaetomiaceae and Eurotiomycetes
+![[Fig2Pangenome_Chaetomia.webp]]
+
+Os termos GO mais significativamente reduzidos nos termófilos desses dois clados foram **O-methyltransferase activity, seguido de phospholipase activity e phospholipid catabolic process**. Fig 2c
+
+Além disso investigaram a expansão e contração da família de genes (HOGs), e encontraram que a maioria da perca genica aconteceu recentemente, demonstrando uma tendencia que os termofilos tiveram mais perca do que ganho de genes ao longo da evolução quando comparado aos mesofilos. Por outro lado os termotolerantes tem altas quantidades de perca e ganho de genes.
+
+### The effective number of codons and GC3 are altered in thermophilic fungi
+
+#### GC content of third base of the codon (GC3) and Effective number of codons (ENC) in thermophilic fungi
+![[42003_2024_6681_Fig3_HTML.webp]]
 
 ## Discussão
-Resumo das principais discussões e implicações do artigo.
 
-## Reflexões e Aplicações
-- Aplicação 1
-- Aplicação 2
-
-## Citações Relevantes
-> Citação importante com página.
 
 ## Dúvidas
 1. Qual a função da alta proporção de gordura saturada nos fosfolipídeos em fungos termotolerantes/termófilos?
@@ -137,6 +159,27 @@ Resumo das principais discussões e implicações do artigo.
 6. **Phylogenetic analysis** → o que é um modelo de parsimonia não ordenado?
 
 7. **Pangenome Analysis** → o que são core, shell e genes únicos?
+	-  **Core Genes (Genes Centrais):**
+    
+	    - **O que são:** Genes que estão presentes em todos os indivíduos de um grupo (por exemplo, todas as cepas de uma espécie). Eles representam a base genética comum e são essenciais para funções vitais e básicas da célula.
+	    - **Função:** Geralmente estão associados a funções celulares fundamentais, como replicação do DNA, metabolismo básico e estrutura celular, sendo críticos para a sobrevivência do organismo.
+	    - **Importância:** Sua presença em todas as cepas indica que desempenham papéis essenciais e conservados na evolução.
+	-  **Shell Genes (Genes da Concha):**
+    
+	    - **O que são:** Genes que estão presentes em algumas, mas não em todas as cepas de um grupo. Esses genes são intermediários entre os core e os genes únicos, variando em frequência dentro da população.
+	    - **Função:** Muitas vezes relacionados a funções adaptativas ou específicas de nicho, como resistência a antibióticos ou metabolismo de substâncias específicas.
+	    - **Importância:** Contribuem para a adaptabilidade e variabilidade genética de uma espécie, permitindo respostas a mudanças ambientais ou condições específicas.
+	-  **Unique Genes (Genes Únicos) ou Cloud Genes (Genes da Nuvem):**
+    
+	    - **O que são:** Genes presentes em apenas uma ou poucas cepas dentro de um grupo, sendo altamente específicos e frequentemente associados a características únicas dessas cepas.
+	    - **Função:** Podem incluir genes relacionados a adaptação ambiental extrema, resistência a estressores específicos ou aquisição de novas capacidades metabólicas.
+	    - **Importância:** Refletem a alta diversidade genética e podem ser indicativos de adaptações recentes ou eventos de aquisição de genes, como transferência horizontal de genes.
+	-  **Resumo da Importância:**
+		- **Core genes** garantem as funções básicas e universais.
+		- **Shell genes** oferecem adaptabilidade e variação dentro do grupo.
+		- **Unique genes** contribuem para as características específicas e exclusivas de certas cepas, refletindo a evolução contínua.
 
-8. **Protein structure prediction and clustering** → GH10 endoxylanases?
+9. **Protein structure prediction and clustering** → GH10 endoxylanases?
 	- **GH10 endoxylanases** são enzimas que pertencem à **família 10 das glicosil hidrolases (GH10)**, uma classificação baseada em suas características estruturais e funcionais. Essas enzimas são especializadas na degradação da **xilana**, um polissacarídeo abundante nas hemiceluloses das paredes celulares de plantas, sendo particularmente importante na indústria de biocombustíveis, alimentação animal, e papel e celulose.
+
+10. O que é rarefaction curve?
