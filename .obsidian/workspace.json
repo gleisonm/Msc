@@ -4,28 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ceee19a1db50c161",
+        "id": "8914330e9bbd3113",
         "type": "tabs",
         "children": [
           {
-            "id": "157c92e7b6a893ca",
+            "id": "ccf96791986400d6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "GWAS - HandsOn.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "87eecb9a43e63be8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "BioME/GWAS - Key Concepts.md",
+                "file": "BioME/GWAS - HandsOn.md",
                 "mode": "source",
                 "source": false
               }
@@ -81,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "bccbf2d8237c7170",
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "GWAS - HandsOn.md",
+                "file": "BioME/GWAS - HandsOn.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "GWAS - HandsOn.md",
+                "file": "BioME/GWAS - HandsOn.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "GWAS - HandsOn.md"
+                "file": "BioME/GWAS - HandsOn.md"
               }
             }
           },
@@ -177,16 +164,16 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "157c92e7b6a893ca",
+  "active": "ccf96791986400d6",
   "lastOpenFiles": [
-    "Women_check.pdf",
-    "Men_check.pdf",
-    "Gender_check.pdf",
-    "histlmiss.pdf",
-    "histimiss.pdf",
-    "Pasted image 20241014132241.png",
     "BioME/GWAs - Genome Wide Association.md",
-    "GWAS - HandsOn.md",
+    "BioME/GWAS - HandsOn.md",
+    "BioME/Figures/Women_check.pdf",
+    "BioME/Figures/Men_check.pdf",
+    "BioME/Figures/Gender_check.pdf",
+    "BioME/Figures/histlmiss.pdf",
+    "BioME/Figures/histimiss.pdf",
+    "BioME/Figures/Pasted image 20241014132241.png",
     "BioME/GWAS - Quality Control.md",
     "BioME/GWAS - Key Concepts.md",
     "BioME/Multiômics - Introdução.md",
