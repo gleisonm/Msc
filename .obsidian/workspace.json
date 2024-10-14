@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BioME/GWAS - Key Concepts.md",
+                "file": "BioME/GWAS - Quality Control.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,8 +81,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "bccbf2d8237c7170",
@@ -99,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BioME/GWAS - Key Concepts.md",
+                "file": "BioME/GWAS - Quality Control.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -116,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BioME/GWAS - Key Concepts.md",
+                "file": "BioME/GWAS - Quality Control.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -139,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BioME/GWAS - Key Concepts.md"
+                "file": "BioME/GWAS - Quality Control.md"
               }
             }
           },
@@ -178,12 +176,13 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "87eecb9a43e63be8",
+  "active": "a4d8184e351e095b",
   "lastOpenFiles": [
-    "BioME/GWAs - Genome Wide Association.md",
+    "BioME/GWAS - Quality Control.md",
     "BioME/GWAS - Key Concepts.md",
-    "BioME/Multiômics.md",
     "BioME/Multiômics - Introdução.md",
+    "BioME/GWAs - Genome Wide Association.md",
+    "BioME/Multiômics.md",
     "BioME/Phylogeny - Comparative genomic analysis of thermophilic fungi reveals convergent evolutionary adaptations and gene losses.md",
     "BioME/Figures/42003_2024_6681_Fig3_HTML.webp",
     "BioME/Figures/Fig2Pangenome_Chaetomia.webp",
