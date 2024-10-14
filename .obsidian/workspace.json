@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "6ce30618c4a26a8a",
+        "id": "ceee19a1db50c161",
         "type": "tabs",
         "children": [
           {
-            "id": "9c48ad003afc2248",
+            "id": "157c92e7b6a893ca",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BioME/Phylogeny - Comparative genomic analysis of thermophilic fungi reveals convergent evolutionary adaptations and gene losses.md",
+                "file": "BioME/GWAS - Key Concepts.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "87eecb9a43e63be8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "BioME/GWAS - Key Concepts.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -69,7 +82,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "bccbf2d8237c7170",
@@ -85,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BioME/Phylogeny - Comparative genomic analysis of thermophilic fungi reveals convergent evolutionary adaptations and gene losses.md",
+                "file": "BioME/GWAS - Key Concepts.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BioME/Phylogeny - Comparative genomic analysis of thermophilic fungi reveals convergent evolutionary adaptations and gene losses.md",
+                "file": "BioME/GWAS - Key Concepts.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BioME/Phylogeny - Comparative genomic analysis of thermophilic fungi reveals convergent evolutionary adaptations and gene losses.md"
+                "file": "BioME/GWAS - Key Concepts.md"
               }
             }
           },
@@ -138,7 +152,7 @@
             }
           },
           {
-            "id": "fd778d1509c5b51e",
+            "id": "02b78d7d9613f224",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -164,11 +178,15 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "a4d8184e351e095b",
+  "active": "87eecb9a43e63be8",
   "lastOpenFiles": [
+    "BioME/GWAs - Genome Wide Association.md",
+    "BioME/GWAS - Key Concepts.md",
+    "BioME/Multiômics.md",
+    "BioME/Multiômics - Introdução.md",
+    "BioME/Phylogeny - Comparative genomic analysis of thermophilic fungi reveals convergent evolutionary adaptations and gene losses.md",
     "BioME/Figures/42003_2024_6681_Fig3_HTML.webp",
     "BioME/Figures/Fig2Pangenome_Chaetomia.webp",
-    "BioME/Phylogeny - Comparative genomic analysis of thermophilic fungi reveals convergent evolutionary adaptations and gene losses.md",
     "BioME/Figures/Figura 1 paper filogenia.webp",
     "BioME/Ribo-seq.md",
     "BioME/Figures/animal_vs_fungal_cell.jpg",
@@ -180,15 +198,12 @@
     "Pasted image 20240926102954.jpg",
     "BioME/Figures/sintese-de-proteina.webp",
     "BioME/Figures/Pasted image 20240924115119.jpg",
-    "BioME/Figures/Infografico-Celulas-humanas-x-celulas-do-fungo.webp",
     "BioME/Phylogeny.md",
     "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases 2.md",
     "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases 1.md",
     "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases.pdf",
     "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases.md",
-    "BioME/Multiômics - Introdução.md",
     "BioME/Multiômics - Integrando Dados.md",
-    "BioME/Multiômics.md",
     "BioME/Figures"
   ]
 }
