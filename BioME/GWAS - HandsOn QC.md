@@ -80,6 +80,8 @@ plot(d3$het, 1-d3$F_MISS, xlab="Heterozygosity", ylab="Callrate")
 
 Cada ponto corresponde à uma amostra, de acordo com seu call rate (eixo-y) e sua heterozygosity (eixo-x).
 
+![[imiss_het_plot.pdf]]
+
 The following code generates a list of individuals who deviate more than 3 standard deviations from the heterozygosity rate mean:
 ```R
 het <- read.table("plink.sampleqc.het", head=TRUE)
@@ -191,5 +193,118 @@ As métricas mais utilizadas são:
 	 - Baixos call rates indicam baixa qualidade
  - Deviation from HWE
 	 - Altos desvios indicam baixa qualidade
+	 - Essa métrica **não é aplicada aos cromossomos X e Y** porque é esperado valores extremos em homens e mulheres
 
+O primeiro passa para gerar os arquivos com apenas autossomas é com o seguinte comando:
+```bash
+plink --bfile HapMap_3_r3_3 --autosome --make-bed --out HapMap_3_r3_4
+```
+
+É possível gerar sumários dessas métricas com o seguinte comando:
+```bash
+plink --bfile HapMap_3_r3_4 --missing --hardy --out plink.snpqc
+```
+
+Este comando gera dois importantes arquivos relevantes para o controle de qualidade:
+1. plink.snpqc.lmiss
+	- Contém o número de genotypes faltantes para cada SNP
+	- Cada linha é um SNP contendo o número (N_MISS) e a proporção (F_MISS) de missing genotype
+2. plink.snpqc.hwe
+	- Contém o desvio HWE de cada SNP **(for a case-control study, in cases and controls separately, and in all samples combined).**
+	- Cada 3 linhas é um SNP e cada uma tem informações sobre o número de calls para cada genotype na coluna GENO, o observado e esperado número de heterozygous genotype calss de acordo com HWE nas colunas O(HET) e E(HET), e o p-valor do desvido de HWE na coluna P
+
+Não existe uma pré determinação de tresholds para o SNPQC e o desequilíbrio de HWE depende da array utilizada, a distribução da frequencia alélica e outros fatores, **o que estamos buscando são outliers**.
+
+Podemos gerar um histograma dos p-valores do desvio de HWE:
+```R
+d1<-read.table(file="plink.snpqc.lmiss", header=TRUE)
+pdf("SNPcall.pdf")
+hist(1-d1$F_MISS, xlab="Marker callrate", ylab="Absolute frequency", main="")
+```
+
+![[SNPcall.pdf]]SNPcall
+
+**Do you observe any outliers in the distribution of SNP call rate?**
+
+Podemos fazer um histograma de p-valores do desvio de HWE:
+```R
+hwe <- read.table(file="plink.snpqc.hwe", header=TRUE)
+d1<-subset(hwe, TEST=="UNAFF")
+pdf("SNPHWE.pdf")
+hist(-log10(d1$P), xlab="HWE -log10(p-value)", ylab="Absolute frequency", main="")
+```
+
+![[SNPHWE.pdf]]
+
+**Note that the p-values are plotted on a -log10 scale on the x-axis. Do you observe any outliers in the distribution of deviation from Hardy-Weinberg equilibrium?**
+
+Para excluir os SNPs de acordo com essas duas métricas usaremos o PLINK com os parâmetros [–geno] e [–hwe]. For example, the following command (type on one continuous line) would remove all SNPs with missing genotype rate greater than 0.1 (i.e. call rate less than 0.98) and HWE p-value more significant than 10-4, and would create a new dataset after excluding these SNPs:
+```bash
+plink --bfile HapMap_3_r3_4 --geno 0.03 --hwe 0.0001 --make-bed --out HapMap_3_r3_5
+```
+
+Repeat this command with the thresholds you have chosen for SNP call rate and deviation from Hardy-Weinberg equilibrium. **How many SNPs are removed on the basis of these filters? What is the overall call rate after removal of these SNPs?**
+
+### Acessing relatedness
+
+Tradicionalmente assumimos que a contribuição das amostras não são correlacionadas durante a análise, por isso o terceiro passo do controle de qualidade é medir o grau de relação entre cada para de amostra, geralmente por **pi-hat** que vai de 0 (não relacionadas) a 1 (geneticamente identicas).
+
+- Amostras duplicadas, ou gemêos monozigoticos terão pi-hat próximo a 1
+- Full sibs, dizygotic twins or parent-child pairs terão pi-hat próximo a 0.5
+- More distant relatives will have lower pi-hat between them
+
+Não há threshold pré-definido de pi-hat, mas o filtro mais comum é **pi-hat > 0.2** 
+
+Para cada par relacionado, **apenas uma amostra precisa ser excluída**. Geralmente excluímos a amostra com a menor quantidade de call rate para maximizar o genotype call rate das amostras.
+
+Para medir a correlação entre os indvíduos, geralmente geramos um set de SNPs comuns (minor allele frequency greater than 0.05) que são indepentes (i.e not in linkage desequilibrium) entre si. 
+
+Isso pode ser feito com o PLINK:
+  
+```bash
+plink --bfile HapMap_3_r3_5 --maf 0.05 --indep-pairwise 50 5 0.05
+```
+
+O parâmetro [–indep-pairwise] especifica o tamanho da janela de cada SNPs a ser considerada. (in this case, 50 SNPs in the window, sliding along the chromosome by 5 SNPs at a time),  and the extent of linkage disequilibrium by which SNPs in the window are pruned (in this case, no pair of SNPs in the window can exceed _r_2 of 0.05). Using this command, how many independent SNPs are present in the dataset? The set of independent SNPs is listed in the file **plink.prune.in**.
+
+The HapMap dataset is known to contain parent-offspring relations.
+
+The next step is to calculate the relatedness between each pair of samples using this set of independent SNP and to report all pairs that exceed a threshold of pi-hat greater than 0.2, say. This can be done using the command (on one continuous line):
+```bash
+plink --bfile HapMap_3_r3_5 --extract plink.prune.in --genome --min 0.2
+```
+
+This command might take some time to run, but progress on the analysis is reported to the screen. The pairs of samples exceeding the pi-hat threshold are reported in the file plink.genome. For each pair of samples, this file reports a number of metrics, including pi-hat in the column labelled **PI_HAT**. What is the pi-hat between the related samples? What do you conclude about their relatedness?
+  
+To generate an exclusion list containing the sample from each pair with the lowest call rate, type the command (on one continuous line):
+```R
+d1<-read.table(file="plink.snpqc.imiss", header=T)
+d2<-read.table(file="plink.genome", header=T)
+rownames(d1) = d1$IID 
+out = NULL
+for (i in 1:nrow(d2)){
+ id1 = as.character(d2[i, "IID1"])
+ id2 = as.character(d2[i, "IID2"])
+ 
+ if (d1[id1, "F_MISS"] > d1[id2, "F_MISS"]){
+  out =c(out, id1)
+ }
+ else{
+  out =c(out, id2)
+ }  
+
+}
+data<-as.data.frame(out)
+colnames(d1)[2] <- "out"
+d1_new<-d1[c("out", "FID")]
+d_merged<-merge(data, d1_new, by="out")
+d_merged<-d_merged[c("FID", "out")]
+write.table(d_merged,file="remove.related.txt", quote=F, col.names=F, row.names=F)
+
+```
+
+To generate a final clean dataset for downstream association analyses, use the command (type on one continuous line):
+```bash
+plink --bfile HapMap_3_r3_5 --remove remove.related.txt --make-bed --out HapMap_3_r3_clean
+```
 

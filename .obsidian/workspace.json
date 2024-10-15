@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BioME/GWAs - Genome Wide Association.md",
+                "file": "BioME/GWAS - HandsOn QC.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BioME/GWAs - Genome Wide Association.md",
+                "file": "BioME/GWAS - HandsOn QC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BioME/GWAs - Genome Wide Association.md",
+                "file": "BioME/GWAS - HandsOn QC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BioME/GWAs - Genome Wide Association.md"
+                "file": "BioME/GWAS - HandsOn QC.md"
               }
             }
           },
@@ -166,8 +166,11 @@
   },
   "active": "ccf96791986400d6",
   "lastOpenFiles": [
-    "BioME/GWAS - HandsOn QC.md",
+    "BioME/Figures/imiss_het_plot.pdf",
+    "BioME/Figures/SNPHWE.pdf",
+    "BioME/Figures/SNPcall.pdf",
     "BioME/GWAs - Genome Wide Association.md",
+    "BioME/GWAS - HandsOn QC.md",
     "BioME/Figures/Women_check.pdf",
     "BioME/Figures/Men_check.pdf",
     "BioME/Figures/Gender_check.pdf",
