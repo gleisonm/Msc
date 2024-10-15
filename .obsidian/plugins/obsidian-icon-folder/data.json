@@ -38,10 +38,11 @@
   "BioME/Multiômics - Integrando Dados.md": "LiBadgeInfo",
   "BioME/Phylogeny.md": "LiAlbum",
   "BioME/Phylogeny - Comparative genomic analysis of thermophilic fungi reveals convergent evolutionary adaptations and gene losses.md": "LiBadgeInfo",
-  "BioME/GWAs - Genome Wide Association.md": "LiAlbum",
   "BioME/GWAS - Key Concepts.md": "LiBadgeInfo",
   "BioME/GWAS - Quality Control.md": "LiBadgeInfo",
   "BioME/GWAS - HandsOn QC.md": "LiBadgeInfo",
   "BioME/GWAS - Imputation.md": "LiBadgeInfo",
-  "BioME/GWAS - HandsOn Imputation.md": "LiBadgeInfo"
+  "BioME/GWAS - HandsOn Imputation.md": "LiBadgeInfo",
+  "BioME/GWAS - Association Analysis.md": "LiBadgeInfo",
+  "BioME/Genome Wide Association.md": "LiAlbum"
 }

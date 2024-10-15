@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BioME/Ribo-seq.md",
+                "file": "BioME/GWAS - Association Analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BioME/Ribo-seq.md",
+                "file": "BioME/GWAS - Association Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BioME/Ribo-seq.md",
+                "file": "BioME/GWAS - Association Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BioME/Ribo-seq.md"
+                "file": "BioME/GWAS - Association Analysis.md"
               }
             }
           },
@@ -166,15 +166,19 @@
   },
   "active": "ccf96791986400d6",
   "lastOpenFiles": [
+    "BioME/Genome Wide Association.md",
+    "BioME/GWAS - Association Analysis.md",
+    "BioME/GWAS - Quality Control.md",
+    "BioME/Multiômics - Introdução.md",
+    "BioME/GWAS - HandsOn Imputation.md",
+    "BioME/GWAS - HandsOn QC.md",
+    "BioME/GWAS - Imputation.md",
+    "BioME/Ribo-seq.md",
     "BioME/Phylogeny.md",
     "BioME/Phylogeny - Comparative genomic analysis of thermophilic fungi reveals convergent evolutionary adaptations and gene losses.md",
     "BioME/Multiômics.md",
-    "BioME/GWAs - Genome Wide Association.md",
     "BioME/Figures/MDS-1.png",
-    "BioME/GWAS - HandsOn Imputation.md",
-    "BioME/GWAS - HandsOn QC.md",
     "MDS.pdf",
-    "BioME/GWAS - Imputation.md",
     "BioME/Figures/imiss_het_plot.pdf",
     "BioME/Figures/SNPHWE.pdf",
     "BioME/Figures/SNPcall.pdf",
@@ -184,13 +188,10 @@
     "BioME/Figures/histlmiss.pdf",
     "BioME/Figures/histimiss.pdf",
     "BioME/Figures/Pasted image 20241014132241.png",
-    "BioME/GWAS - Quality Control.md",
     "BioME/GWAS - Key Concepts.md",
-    "BioME/Multiômics - Introdução.md",
     "BioME/Figures/42003_2024_6681_Fig3_HTML.webp",
     "BioME/Figures/Fig2Pangenome_Chaetomia.webp",
     "BioME/Figures/Figura 1 paper filogenia.webp",
-    "BioME/Ribo-seq.md",
     "BioME/Figures/animal_vs_fungal_cell.jpg",
     "Pasted image 20240926103303.jpg",
     "BioME/Figures/Riboseq-keysteps.jpg",
