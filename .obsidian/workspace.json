@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BioME/GWAS - Imputation.md",
+                "file": "BioME/GWAS - HandsOn Imputation.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "bccbf2d8237c7170",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BioME/GWAS - Imputation.md",
+                "file": "BioME/GWAS - HandsOn Imputation.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BioME/GWAS - Imputation.md",
+                "file": "BioME/GWAS - HandsOn Imputation.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BioME/GWAS - Imputation.md"
+                "file": "BioME/GWAS - HandsOn Imputation.md"
               }
             }
           },
@@ -166,7 +167,9 @@
   },
   "active": "ccf96791986400d6",
   "lastOpenFiles": [
+    "MDS.pdf",
     "BioME/GWAs - Genome Wide Association.md",
+    "BioME/GWAS - HandsOn Imputation.md",
     "BioME/GWAS - Imputation.md",
     "BioME/GWAS - HandsOn QC.md",
     "BioME/Figures/imiss_het_plot.pdf",
