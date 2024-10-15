@@ -235,11 +235,37 @@ abline(h=0.035,lty=3)
 legend("topright", pch=c(1,1,1,1,3),c("EUR","ASN","AMR","AFR","OWN"),col=c("green","red",470,"blue","black"),bty="o",cex=1)
 ```
 
-![[MDS.pdf]]
+![[MDS-1.png]]
 
 Este plot demonstra onde seu aquivo recai sobre o grupo europeu do 1k Genome data. Entretanto não temos outliers de raça.
 
 For educational purposes however, we give scripts below to filter out population stratification outliers. Please execute the script below in order to generate the appropriate files for the next tutorial.
 
 ## Exclude Ethnic Outliers
-Selecione os indivíduos no HapMap data abaixo do threshold. 
+Selecione os indivíduos no HapMap data abaixo do threshold. O valor de cutoff não é fixo e deve ser determinado baseado na visualização das duas primeiras dimensões. Para excluir os outliers, the threshold deve ser entre o cluster da população de insteresse
+```bash
+awk '{ if ($4 <-0.04 && $5 >0.03) print $1,$2 }' MDS_merge2.mds > EUR_MDS_merge2
+```
+
+Extraia esses indivíduos do HapMap data:
+```bash
+plink --bfile HapMap_3_r3_clean --keep EUR_MDS_merge2 --make-bed --out HapMap_3_r3_clean2
+```
+
+**Please note, since our HapMap data did include any ethnic outliers, no individuals were removed at this step. However, if our data would have included individuals outside of the thresholds we set, then these individuals would have been removed.**
+
+## Create Covariates based on MDS
+Perform an MDS ONLY on HapMap data without ethnic outliers. The values of the 10 MDS dimensions are subsequently used as covariates in the association analysis in the third tutorial.
+
+```bash
+plink --bfile HapMap_3_r3_clean2 --extract plink.prune.in --genome --out HapMap_3_r3_clean2
+
+plink --bfile HapMap_3_r3_clean2 --read-genome HapMap_3_r3_clean2.genome --cluster --mds-plot 10 --out HapMap_3_r3_clean2_mds
+```
+
+Change the format of the .mds file into a plink covariate file. The values in covar_mds.txt can be used as covariates, to adjust for remaining population stratification, in a genome-wide association analysis.
+
+```bash
+awk '{print$1, $2, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13}' HapMap_3_r3_clean2_mds.mds > covar_mds.txt
+```
+

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BioME/GWAS - HandsOn Imputation.md",
+                "file": "BioME/Ribo-seq.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,8 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "bccbf2d8237c7170",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BioME/GWAS - HandsOn Imputation.md",
+                "file": "BioME/Ribo-seq.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BioME/GWAS - HandsOn Imputation.md",
+                "file": "BioME/Ribo-seq.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BioME/GWAS - HandsOn Imputation.md"
+                "file": "BioME/Ribo-seq.md"
               }
             }
           },
@@ -167,11 +166,15 @@
   },
   "active": "ccf96791986400d6",
   "lastOpenFiles": [
-    "MDS.pdf",
+    "BioME/Phylogeny.md",
+    "BioME/Phylogeny - Comparative genomic analysis of thermophilic fungi reveals convergent evolutionary adaptations and gene losses.md",
+    "BioME/Multiômics.md",
     "BioME/GWAs - Genome Wide Association.md",
+    "BioME/Figures/MDS-1.png",
     "BioME/GWAS - HandsOn Imputation.md",
-    "BioME/GWAS - Imputation.md",
     "BioME/GWAS - HandsOn QC.md",
+    "MDS.pdf",
+    "BioME/GWAS - Imputation.md",
     "BioME/Figures/imiss_het_plot.pdf",
     "BioME/Figures/SNPHWE.pdf",
     "BioME/Figures/SNPcall.pdf",
@@ -184,8 +187,6 @@
     "BioME/GWAS - Quality Control.md",
     "BioME/GWAS - Key Concepts.md",
     "BioME/Multiômics - Introdução.md",
-    "BioME/Multiômics.md",
-    "BioME/Phylogeny - Comparative genomic analysis of thermophilic fungi reveals convergent evolutionary adaptations and gene losses.md",
     "BioME/Figures/42003_2024_6681_Fig3_HTML.webp",
     "BioME/Figures/Fig2Pangenome_Chaetomia.webp",
     "BioME/Figures/Figura 1 paper filogenia.webp",
@@ -197,13 +198,10 @@
     "BioME/Ribo-seq - Principles.md",
     "BioME/Ribo-seq - keysteps.md",
     "Pasted image 20240926102954.jpg",
-    "BioME/Figures/sintese-de-proteina.webp",
-    "BioME/Phylogeny.md",
     "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases 2.md",
     "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases 1.md",
     "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases.pdf",
     "Tracing Translational Footprint by RiboSeq Principle Workflow and Applications to Understand the Mechanism of Human Diseases.md",
-    "BioME/Multiômics - Integrando Dados.md",
-    "BioME/Figures"
+    "BioME/Multiômics - Integrando Dados.md"
   ]
 }
