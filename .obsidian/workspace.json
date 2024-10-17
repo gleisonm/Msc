@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BioME/GWAS - HandsOn Association Analysis.md",
+                "file": "GWAS - HandsOn Imputation Solutions.md",
                 "mode": "source",
                 "source": false
               }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BioME/GWAS - HandsOn Association Analysis.md",
+                "file": "GWAS - HandsOn Imputation Solutions.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BioME/GWAS - HandsOn Association Analysis.md",
+                "file": "GWAS - HandsOn Imputation Solutions.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BioME/GWAS - HandsOn Association Analysis.md"
+                "file": "GWAS - HandsOn Imputation Solutions.md"
               }
             }
           },
@@ -168,6 +168,7 @@
   "active": "ccf96791986400d6",
   "lastOpenFiles": [
     "BioME/Genome Wide Association.md",
+    "GWAS - HandsOn Imputation Solutions.md",
     "BioME/GWAS - HandsOn Association Analysis.md",
     "BioME/GWAS - Association Analysis.md",
     "BioME/GWAS - Key Concepts.md",

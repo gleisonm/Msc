@@ -5,5 +5,5 @@
 	1. [[GWAS - HandsOn Imputation]]
 4. [[GWAS - Association Analysis]]
 	1. [[GWAS - HandsOn Association Analysis]] 
-
+5. [[GWAS - HandsOn Imputation Solutions]]
 
