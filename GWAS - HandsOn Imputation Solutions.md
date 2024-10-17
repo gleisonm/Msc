@@ -115,4 +115,124 @@ You can test for association with the phenotype (pheno) under an additive model,
 snptest -data STUDY.impute.gen COHORT.impute.sample -o STUDY.snptest -frequentist 1 -method expected -pheno pheno -cov_names C1 C2
 ```
 
-The files specified after the -data option indicate the imputed genotype and sample files, whilst the -o option indicates the name of the SNPTEST output file. The -frequentist option specifies the association model to be fitted: choosing “1” indicates an additive model. The option -method specifies the approach used to fit this model: using “expected” fits a regression model with the genotype probabilities. The option -pheno specifies the name of the column in the sample file containing the phenotype to be tested for association. Finally, the option -cov_names indicates the names of the columns in the sample file to be adjusted for in the association analysis (separated by a single space).
+The files specified after the -data option indicate the imputed genotype and sample files, whilst the -o option indicates the name of the SNPTEST output file. The [-frequentist] option specifies the association model to be fitted: choosing “1” indicates an additive model. The option -method specifies the approach used to fit this model: using “expected” fits a regression model with the genotype probabilities. The option [-pheno] specifies the name of the column in the sample file containing the phenotype to be tested for association. Finally, the option [-cov_names] indicates the names of the columns in the sample file to be adjusted for in the association analysis (separated by a single space).
+
+The command will take some time to run, so please be patient. Output will be printed to the screen, including summaries of the phenotype and covariates to be included in the analysis. The program analyses data in “chunks” of 100 SNPs, and will report progress to the screen. When SNPTEST finishes running, you should see the message “finito”.
+
+The file is very detailed and contains a lot of information! After some initial information confirming the association test used, the file contains one row per SNP, with columns providing different summary statistics for the quality of imputation and the association with the phenotype. The most important columns in the output are:
+
+- rsid: identifier of the SNP (in the 1000 Genomes reference panel)
+- position: position of the SNP (basepairs)
+- alleleA and alleleB: the pair of alleles at the SNP
+- info: the “info score” metric of imputation quality
+- frequentist_add_pvalue: p-value for association from the additive model
+- frequentist_add_beta_1: the log-odds ratio for allele B relative to allele A
+- frequentist_add_se_1: the standard error of the log-odds ratio
+- comment: information regarding problems with fitting the regression model
+
+For many of the SNPs, you will see a comment about the model not being fitted, and many of the association summary statistics are “NA”. This occurs typically for rare variants, where the regression model cannot be fitted because the counts of the minor allele are so low in cases and/or controls.  
+
+You can plot a summary of association statistics from the additive model across the region for all SNPs with info score above a pre-specified threshold using the command:
+```R
+args<-commandArgs(trailingOnly=TRUE)
+name <- args[1]
+name2 <- args[2]
+n <- as.double(args[3])
+out <- args[4]
+
+data<-read.table(name, header=T, sep=" ")
+
+library(vcfR)
+library(plyr)
+
+data <- read.table(name, header=T, sep=" ")
+d <- read.vcfR(name2)
+
+d_imp <- as.data.frame(d@fix[,c("ID", "INFO")], stringsAsFactors=F)
+
+d_imp <- within(d_imp, {
+ rsid <- ID
+ imputed <- sapply(strsplit(INFO, ";"), "[", 3)
+})
+
+data <- join(data, d_imp, by="rsid", type="l")
+
+data$imputed <- ifelse(data$imputed %in% "IMP", 1, 0)
+
+
+pdf(out)
+plot(data$position[data$info>=n],-log10(data$frequentist_add_pvalue[data$info>=n]), pch=20, xlab="Position (Bp)", ylab="-log10(p-value)",col=c("red","black")[data$imputed+1])
+points(data$position[data$info>=n & data$imputed==0],-log10(data$frequentist_add_pvalue[data$info>=n & data$imputed==0]), pch=20,col="red")
+```
+
+
+**IMAGEM**
+
+n this plot, each point represents a SNP, plotted according to the physical position on the x-axis and the -log10 p-value for association from the additive model on the y-axis. SNPs are coloured in red if directly typed, and coloured in black if imputed.
+
+Is the strongest signal of association from a directly typed or imputed SNP?
+
+You’ll notice that all the most strongly associated SNPs localise to the same region. Why do you think this is? To identify which SNPs attain genome-wide significance, you can use the command:
+
+```R
+#R --vanilla --slave --args STUDY.snptest 0.4 5e-8 < snptest.extract.R | sort -k 8 -g
+R --vanilla --slave --args STUDY.snptest 0.4 5e-8 < snptest.extract.R | sort -k 8 -g
+```
+
+
+How many SNPs attain genome-wide significance in this analysis? Which SNP shows the strongest signal for association (the lead SNP)? What is the log-odds ratio and the corresponding standard error for the lead SNP?
+
+# Optional: Testing for association using EPACTS
+
+EPACTS software is a fast tool for association analysis that enables several statistical tests.
+
+As the first step, we will create an index for our imputed genotype file using tabix software:
+
+```bash
+tabix-0.2.6/tabix -p vcf STUDY_imputed.vcf.gz
+```
+
+This makes possible to very quickly retrieve data from any position of the file and is necessary to run EPACTS analysis.
+
+This is the sample file, we need to create for running association analysis on EPACTS.
+
+You can test for association with the phenotype (pheno) under an additive model, adjusting for two eigenvectors (C1 and C2), using the following EPACTS command (type on one continuous line):
+
+```bash
+epacts single --vcf STUDY_imputed.vcf.gz --ped STUDY.ped --chr 1 --pheno pheno --cov C1 --cov C2 --test b.score --out STUDY_imputed --field DS --run 1
+```
+  
+
+The file specified after the --vcf option indicate the imputed genotype, and --ped phenotype file, whilst the --out option indicates the name of the EPACTS output files. The --test option specifies the association test, which in our case is logistic score test using additive genetic model. The option --chr indicates that we are analysing chromosome 1, --field tells which genotype data field to use from the vcf file (options are GT, DS, and GP in our case), and --run tells how many cores to use for the calculation. If the --run parameter is not set, EPACTS software generates necessary files for the association analysis but doesn’t run tests themselves. The option --pheno specifies the name of the column in the sample file containing the phenotype to be tested for association. Finally, the option --cov indicates the names of the columns in the sample file to be adjusted for in the association analysis (each covariate with additional --cov argument).
+
+EPACTS generates several output files. The most important ones are:
+
+- STUDY_imputed.epacts.gz - Main results file for the association analysis. File is gzip compressed.
+- STUDY_imputed.epacts.mh.pdf - Manhattan plot of the results
+- STUDY_imputed.epacts.qq.pdf - Quantile-quantile plot of the results
+- STUDY_imputed.epacts.top5000 – Top 5000 associations sorted by the p-value.
+
+The most important columns of the output file are:
+
+- CHROM: chromosome
+- BEGIN: position
+- MARKER_ID: marker name
+- NS : Number of phenotyped samples with non-missing genotypes
+- AC : Total Non-reference Allele Count
+- MAF : Minor allele frequencies
+- PVALUE : P-value of single variant test
+- AF.CASE : Non-reference allele frequencies for cases
+- AF.CTRL : Non-reference allele frequencies for controls
+- 
+Download Manhattan and QQ plots for inspection.
+
+How many SNPs attain genome-wide significance in this analysis? Which SNP shows the strongest signal for association (the first SNP in top5000 file).
+You can check these by typing
+
+```bash
+awk ‘{if($9<5e-08) print $0}’ STUDY_imputed.epacts.top5000 | wc -l
+
+head STUDY_imputed.epacts.top5000
+```
+
+How does the association p-values match with the ones from SNPTEST analysis?
