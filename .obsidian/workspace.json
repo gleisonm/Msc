@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BioME/GWAS - Association Analysis.md",
+                "file": "BioME/GWAS - HandsOn Association Analysis.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "bccbf2d8237c7170",
@@ -85,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "BioME/GWAS - Association Analysis.md",
+                "file": "BioME/GWAS - HandsOn Association Analysis.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "BioME/GWAS - Association Analysis.md",
+                "file": "BioME/GWAS - HandsOn Association Analysis.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "BioME/GWAS - Association Analysis.md"
+                "file": "BioME/GWAS - HandsOn Association Analysis.md"
               }
             }
           },
@@ -166,9 +167,10 @@
   },
   "active": "ccf96791986400d6",
   "lastOpenFiles": [
-    "BioME/GWAS - Key Concepts.md",
-    "BioME/GWAS - Association Analysis.md",
     "BioME/Genome Wide Association.md",
+    "BioME/GWAS - HandsOn Association Analysis.md",
+    "BioME/GWAS - Association Analysis.md",
+    "BioME/GWAS - Key Concepts.md",
     "BioME/GWAS - Quality Control.md",
     "BioME/Multiômics - Introdução.md",
     "BioME/GWAS - HandsOn Imputation.md",

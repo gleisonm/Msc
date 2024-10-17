@@ -1,7 +1,9 @@
-1 - [[GWAS - Key Concepts]]
-2 - [[GWAS - Quality Control]]
-3 - [[GWAS - HandsOn QC]]
-4 - [[GWAS - Imputation]]
-5 - [[GWAS - HandsOn Imputation]]
-6- [[GWAS - Association Analysis]]
+1. [[GWAS - Key Concepts]]
+2. [[GWAS - Quality Control]]
+	1. [[GWAS - HandsOn QC]]
+3. [[GWAS - Imputation]]
+	1. [[GWAS - HandsOn Imputation]]
+4. [[GWAS - Association Analysis]]
+	1. [[GWAS - HandsOn Association Analysis]] 
+
 
